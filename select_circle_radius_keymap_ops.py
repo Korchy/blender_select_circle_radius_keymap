@@ -38,10 +38,6 @@ class SCR_KEYMAP_OT_change(Operator):
                 props.radius -= value
         return {'FINISHED'}
 
-    @classmethod
-    def poll(cls, context):
-        return True
-
 
 def register():
     register_class(SCR_KEYMAP_OT_change)
