@@ -4,7 +4,6 @@
 # GitHub
 #    https://github.com/Korchy/blender_select_circle_radius_keymap
 
-import bpy
 from bl_ui.space_toolsystem_common import ToolSelectPanelHelper
 from bpy.props import EnumProperty
 from bpy.types import Operator
@@ -27,7 +26,6 @@ class SCR_KEYMAP_OT_change(Operator):
     )
 
     def execute(self, context):
-        # bpy.ops.wm.tool_set_by_id(name='builtin.select_circle')
         tool = ToolSelectPanelHelper.tool_active_from_context(context=context)
         if tool.idname == 'builtin.select_circle':
             props = tool.operator_properties('view3d.select_circle')
